@@ -1,20 +1,21 @@
 # AWS 
 ### IP Publique RedHat: 
-### IP Publique LinuxAMa:
+### IP Publique LinuxAMa:  
+
+        ssh -i 'c:/Users/m.kout/.../Directory/LinuxdeBaseAWS.pem' ec2-user@ip_address  
+        
+## Download and install Tripwire
 
 
-ssh -i 'c:/Users/m.kout/.../Directory/LinuxdeBaseAWS.pem' ec2-user@ip_address
-
-
-cd /usr/src
-sudo wget https://github.com/Tripwire/tripwire-open-source/releases/download/2.4.3.7/tripwire-open-source-2.4.3.7.tar.gz
-sudo tar zxvf tripwire-2.4.1.2-src.tar
-cd tripwire-open-source-2.4.3.7
-./configure --prefix=/opt/tripwire
-makecd
-make install
-cd /opt/tripwire/sbin/
-./tripwire --init
+        cd /usr/src
+        sudo wget https://github.com/Tripwire/tripwire-open-source/releases/download/2.4.3.7/tripwire-open-source-2.4.3.7.tar.gz
+        sudo tar zxvf tripwire-2.4.1.2-src.tar
+        cd tripwire-open-source-2.4.3.7
+        ./configure --prefix=/opt/tripwire
+        makecd
+        make install
+        cd /opt/tripwire/sbin/
+        ./tripwire --init
 
 ### Pour ajouter une ou des règles 
     /opt/tripwire/etc/twpol.txt
